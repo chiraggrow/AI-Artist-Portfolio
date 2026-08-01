@@ -1,4 +1,4 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import {
   RxDiscordLogo,
   RxGithubLogo,
@@ -7,279 +7,146 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
-export const SKILL_DATA = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    image: "framer.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Stripe",
-    image: "stripe.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-] as const;
+import OpenAI from "@lobehub/icons/es/OpenAI";
+import Claude from "@lobehub/icons/es/Claude";
+import Gemini from "@lobehub/icons/es/Gemini";
+import Grok from "@lobehub/icons/es/Grok";
+import Perplexity from "@lobehub/icons/es/Perplexity";
+import DeepSeek from "@lobehub/icons/es/DeepSeek";
+import Mistral from "@lobehub/icons/es/Mistral";
+import Midjourney from "@lobehub/icons/es/Midjourney";
+import Sora from "@lobehub/icons/es/Sora";
+import Runway from "@lobehub/icons/es/Runway";
+import Pika from "@lobehub/icons/es/Pika";
+import Hailuo from "@lobehub/icons/es/Hailuo";
+import Kling from "@lobehub/icons/es/Kling";
+import Cursor from "@lobehub/icons/es/Cursor";
+import Windsurf from "@lobehub/icons/es/Windsurf";
+import Copilot from "@lobehub/icons/es/Copilot";
+import Codex from "@lobehub/icons/es/Codex";
+import Lovable from "@lobehub/icons/es/Lovable";
+import Replit from "@lobehub/icons/es/Replit";
+import V0 from "@lobehub/icons/es/V0";
+import NotebookLM from "@lobehub/icons/es/NotebookLM";
+import HuggingFace from "@lobehub/icons/es/HuggingFace";
+import Replicate from "@lobehub/icons/es/Replicate";
+import Figma from "@lobehub/icons/es/Figma";
+import Notion from "@lobehub/icons/es/Notion";
+import CapCut from "@lobehub/icons/es/CapCut";
+import Vercel from "@lobehub/icons/es/Vercel";
+import Suno from "@lobehub/icons/es/Suno";
+import OpenCode from "@lobehub/icons/es/OpenCode";
+import Antigravity from "@lobehub/icons/es/Antigravity";
+import Meta from "@lobehub/icons/es/Meta";
+import Anthropic from "@lobehub/icons/es/Anthropic";
+import Ollama from "@lobehub/icons/es/Ollama";
+import Obsidian from "@lobehub/icons/es/Obsidian";
+
+// Row 1 – 13 icons: Major AI Models & Platforms (≈64px)
+export const ROW_1 = [
+  { kind: "component" as const, name: "OpenAI", component: OpenAI.Combine, size: 64, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
+  { kind: "component" as const, name: "Claude", component: Claude.Color, size: 64 },
+  { kind: "component" as const, name: "Gemini", component: Gemini.Color, size: 64 },
+  { kind: "component" as const, name: "Grok", component: Grok.Combine, size: 64, isCombine: true },
+  { kind: "component" as const, name: "Perplexity", component: Perplexity.Color, size: 64 },
+  { kind: "component" as const, name: "DeepSeek", component: DeepSeek.Color, size: 64 },
+  { kind: "component" as const, name: "Mistral", component: Mistral.Color, size: 64 },
+  { kind: "component" as const, name: "Midjourney", component: Midjourney.Combine, size: 64, isCombine: true },
+  { kind: "component" as const, name: "Sora", component: Sora.Color, size: 64 },
+  { kind: "component" as const, name: "Runway", component: Runway.Combine, size: 64, isCombine: true },
+  { kind: "component" as const, name: "Pika", component: Pika.Combine, size: 64, isCombine: true, color: "#FFD184" },
+  { kind: "component" as const, name: "Hailuo", component: Hailuo.Color, size: 64 },
+  { kind: "component" as const, name: "Kling", component: Kling.Color, size: 64 },
+];
+
+// Row 2 – 10 icons: AI Development Tools (≈56px)
+export const ROW_2 = [
+  { kind: "component" as const, name: "Cursor", component: Cursor.Combine, size: 56, isCombine: true, color: "#6C47FF" },
+  { kind: "component" as const, name: "Windsurf", component: Windsurf.Combine, size: 56, isCombine: true, color: "#4A90D9" },
+  { kind: "component" as const, name: "Copilot", component: Copilot.Color, size: 56 },
+  { kind: "component" as const, name: "Codex", component: Codex.Color, size: 56 },
+  { kind: "component" as const, name: "Lovable", component: Lovable.Color, size: 56 },
+  { kind: "component" as const, name: "Replit", component: Replit.Color, size: 56 },
+  { kind: "component" as const, name: "v0", component: V0, size: 56, backdrop: "rgba(255,255,255,0.12)" },
+  { kind: "component" as const, name: "NotebookLM", component: NotebookLM.Combine, size: 56, isCombine: true },
+  { kind: "component" as const, name: "HuggingFace", component: HuggingFace.Color, size: 56 },
+  { kind: "component" as const, name: "Replicate", component: Replicate.Brand, size: 56, color: "#EA2805" },
+];
+
+// Row 3 – 8 icons: AI Apps & Creative Tools (≈48px)
+export const ROW_3 = [
+  { kind: "component" as const, name: "Figma", component: Figma.Color, size: 48 },
+  { kind: "component" as const, name: "Notion", component: Notion.Combine, size: 48, isCombine: true, backdrop: "#FFFFFF", color: "#000000" },
+  { kind: "image" as const, name: "Canva", src: "/assets/icons/canva.svg", size: 48 },
+  { kind: "component" as const, name: "CapCut", component: CapCut.Combine, size: 48, isCombine: true },
+  { kind: "component" as const, name: "Vercel", component: Vercel.Combine, size: 48, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
+  { kind: "component" as const, name: "Suno", component: Suno.Combine, size: 48, isCombine: true },
+  { kind: "component" as const, name: "OpenCode", component: OpenCode.Combine, size: 48, isCombine: true, color: "#007AFF" },
+  { kind: "component" as const, name: "Antigravity", component: Antigravity.Color, size: 48 },
+];
+
+// Row 4 – 4 icons: AI Infrastructure & Agents (≈40px)
+export const ROW_4 = [
+  { kind: "component" as const, name: "Meta", component: Meta.Color, size: 40 },
+  { kind: "component" as const, name: "Anthropic", component: Anthropic, size: 40, color: "#D4893A" },
+  { kind: "component" as const, name: "Ollama", component: Ollama.Combine, size: 40, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
+  { kind: "component" as const, name: "Obsidian", component: Obsidian.Color, size: 40 },
+];
+
+// Row 5 – 1 icon: Hero / Featured (≈72px)
+export const ROW_5 = [
+  { kind: "image" as const, name: "Higgsfield AI", src: "/assets/icons/higgsfield.svg", size: 72 },
+];
 
 export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/chirag_grow/",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://www.linkedin.com/in/chirag-mittal-2b8019373",
+  },
+  {
+    name: "Discord",
+    icon: RxDiscordLogo,
+    link: "https://discord.com",
   },
   {
     name: "Twitter",
     icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
+    link: "https://x.com/chirag_grow",
   },
 ] as const;
 
-export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    image: "mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const BACKEND_SKILL = [
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express.js",
-    image: "express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Firebase",
-    image: "firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "MySQL",
-    image: "mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    image: "prisma.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    image: "graphql.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const FULLSTACK_SKILL = [
-  {
-    skill_name: "React Native",
-    image: "reactnative.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    image: "tauri.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
-  },
-
-  {
-    skill_name: "Figma",
-    image: "figma.png",
-    width: 50,
-    height: 50,
-  },
-] as const;
-
-export const OTHER_SKILL = [
-  {
-    skill_name: "Go",
-    image: "go.png",
-    width: 60,
-    height: 60,
-  },
-] as const;
+export type Project = {
+  videoId: string;
+  title: string;
+  description: string;
+};
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    videoId: "Gvi7LIopTQE",
+    title: "AI Educational Short Film",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
-    image: "/projects/project-1.png",
-    link: "https://example.com",
+      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
   },
   {
-    title: "Interactive Cards Portfolio",
+    videoId: "W7iuhGPaay8",
+    title: "AI UGC Skincare Commercial",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
-    image: "/projects/project-2.png",
-    link: "https://example.com",
+      "A high-converting AI-generated skincare advertisement featuring realistic virtual talent, product storytelling, and premium visuals.\nCreated using an end-to-end AI production pipeline from concept development to final cinematic edit.",
   },
   {
-    title: "Space Themed Website",
+    videoId: "Yp3TagRSIXc",
+    title: "AI Educational Short Film",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
   },
-] as const;
+] as const satisfies readonly Project[];
 
 export const FOOTER_DATA = [
   {
@@ -308,17 +175,17 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
+        link: "https://www.instagram.com/chirag_grow/",
       },
       {
         name: "Twitter",
         icon: RxTwitterLogo,
-        link: "https://x.com/_sanidhyy",
+        link: "https://x.com/chirag_grow",
       },
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/chirag-mittal-2b8019373",
       },
     ],
   },
@@ -326,19 +193,19 @@ export const FOOTER_DATA = [
     title: "About",
     data: [
       {
-        name: "Become Sponsor",
+        name: "AI Artist",
         icon: null,
-        link: "https://youtube.com",
+        link: "#about-me",
       },
       {
-        name: "Learning about me",
+        name: "Prompt Engineer",
         icon: null,
-        link: "https://example.com",
+        link: "#about-me",
       },
       {
-        name: "Contact Me",
+        name: "AI Enthusiastic",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "#about-me",
       },
     ],
   },
@@ -354,11 +221,45 @@ export const NAV_LINKS = [
     link: "#skills",
   },
   {
+    title: "Tools",
+    link: "#tools",
+  },
+  {
+    title: "Experience",
+    link: "#experience",
+  },
+  {
     title: "Projects",
     link: "#projects",
   },
 ] as const;
 
-export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+export type Experience = {
+  company: string;
+  role: string;
+  duration: string;
+  location: string;
+  description: string;
+  highlights: readonly string[];
+  techTags: readonly string[];
+  logo?: string;
 };
+
+export const EXPERIENCE = [
+  {
+    company: "Enrai (Enrai Studio Private Limited)",
+    role: "Generative AI Animation Intern",
+    duration: "May 2026 – Aug 2026",
+    location: "Bengaluru, India",
+    description:
+      "Working as a Generative AI Animation Intern at Enrai Studio, contributing to Generative AI animation production pipelines for original content including anime series, AI-produced ad campaigns, and cinematic spec ads. Gaining hands-on experience across the full production pipeline — from concept and storyboarding to final delivery — under direct mentorship of the founding team.",
+    highlights: [
+      "Contributed to Generative AI animation pipelines for anime series, AI-produced ads, and cinematic spec ads",
+      "Applied industry-standard Generative AI tools for image generation, video synthesis, and motion design",
+      "Participated in storyboarding, shot planning, prompt engineering, and post-production workflows",
+      "Collaborated with the creative and production team on project briefs from concept through delivery",
+    ],
+    techTags: ["Generative AI", "Video Synthesis", "Prompt Engineering", "Motion Design"],
+    logo: "/assets/enrai-logo.jpeg",
+  },
+] as const satisfies readonly Experience[];

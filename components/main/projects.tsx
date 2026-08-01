@@ -14,10 +14,9 @@ export const Projects = () => {
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.title}
-            src={project.image}
+            videoId={project.videoId}
             title={project.title}
             description={project.description}
-            link={project.link}
           />
         ))}
       </div>

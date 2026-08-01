@@ -1,99 +1,96 @@
-import { SkillDataProvider } from "@/components/sub/skill-data-provider";
-import { SkillText } from "@/components/sub/skill-text";
+"use client";
 
 import {
-  BACKEND_SKILL,
-  FRONTEND_SKILL,
-  FULLSTACK_SKILL,
-  OTHER_SKILL,
-  SKILL_DATA,
-} from "@/constants";
+  SparklesIcon,
+  CommandLineIcon,
+  CodeBracketIcon,
+  FilmIcon,
+  BookOpenIcon,
+  MegaphoneIcon,
+  PlayIcon,
+} from "@heroicons/react/24/outline";
+import { SkillCard } from "@/components/sub/skill-card";
+
+const SKILLS_DATA = [
+  {
+    Icon: SparklesIcon,
+    title: "AI Artist",
+    proficiency: 0.9,
+    description:
+      "Creating cinematic AI visuals, animations, branded content, and character-consistent productions with creative direction.",
+  },
+  {
+    Icon: CommandLineIcon,
+    title: "Prompt Engineer",
+    proficiency: 0.95,
+    description:
+      "Designing optimized prompts that generate reliable, high-quality AI images, videos, and production workflows.",
+  },
+  {
+    Icon: CodeBracketIcon,
+    title: "Development",
+    proficiency: 0.85,
+    description:
+      "Building responsive websites, AI-powered applications, and interactive digital experiences using scalable modern technologies.",
+  },
+  {
+    Icon: CodeBracketIcon,
+    title: "Generative AI",
+    proficiency: 0.9,
+    description:
+      "Building and fine-tuning generative AI systems using LLM workflows, RAG pipelines, model integrations.",
+  },
+  {
+    Icon: FilmIcon,
+    title: "AI Filmmaking",
+    proficiency: 0.88,
+    description:
+      "Directing AI-generated films from script to screen with shot composition and cinematic pacing.",
+  },
+  {
+    Icon: BookOpenIcon,
+    title: "Storytelling",
+    proficiency: 0.92,
+    description:
+      "Crafting compelling narratives and character arcs that give AI-generated content emotional depth, voice.",
+  },
+  {
+    Icon: MegaphoneIcon,
+    title: "Content Creation",
+    proficiency: 0.9,
+    description:
+      "Producing platform-ready content, social videos, campaigns, and digital assets built for real engagement.",
+  },
+  {
+    Icon: PlayIcon,
+    title: "AI Animation",
+    proficiency: 0.85,
+    description:
+      "Bringing static concepts to life through AI-driven motion, character animation, and visual storytelling.",
+  },
+];
 
 export const Skills = () => {
   return (
     <section
       id="skills"
-      style={{ transform: "scale(0.9)" }}
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20"
+      className="flex flex-col items-center justify-center py-20"
     >
-      <SkillText />
+      <h1 className="text-[40px] font-semibold py-20">
+        My{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          Skills.
+        </span>
+      </h1>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {SKILL_DATA.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10 max-w-7xl w-full">
+        {SKILLS_DATA.map((skill, i) => (
+          <SkillCard key={skill.title} {...skill} index={i} />
         ))}
-      </div>
-
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FRONTEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {BACKEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FULLSTACK_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {OTHER_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-auto"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-          >
-            <source src="/videos/skills-bg.webm" type="video/webm" />
-          </video>
-        </div>
       </div>
     </section>
   );
 };
+
+
+

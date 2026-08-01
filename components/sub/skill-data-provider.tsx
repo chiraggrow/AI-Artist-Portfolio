@@ -1,22 +1,21 @@
 "use client";
 
+import { createElement } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
+export type SkillIcon =
+  | { kind: "component"; name: string; size: number; component: React.ElementType; isCombine?: boolean; color?: string; backdrop?: string }
+  | { kind: "image"; name: string; size: number; src: string };
+
 type SkillDataProviderProps = {
-  src: string;
-  name: string;
-  width: number;
-  height: number;
+  icon: SkillIcon;
   index: number;
 };
 
 export const SkillDataProvider = ({
-  src,
-  name,
-  width,
-  height,
+  icon,
   index,
 }: SkillDataProviderProps) => {
   const { ref, inView } = useInView({
@@ -28,7 +27,24 @@ export const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.1;
+  if (icon.kind === "image") {
+    return (
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        variants={imageVariants}
+        animate={inView ? "visible" : "hidden"}
+        custom={index}
+        transition={{ delay: index * 0.1 }}
+      >
+        <Image src={icon.src} width={icon.size} height={icon.size} alt={icon.name} />
+      </motion.div>
+    );
+  }
+
+  const iconElement = icon.isCombine
+    ? createElement(icon.component, { size: icon.size, showText: false, color: icon.color })
+    : createElement(icon.component, { size: icon.size, color: icon.color });
 
   return (
     <motion.div
@@ -37,9 +53,18 @@ export const SkillDataProvider = ({
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: index * animationDelay }}
+      transition={{ delay: index * 0.1 }}
     >
-      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
+      {icon.backdrop ? (
+        <div
+          className="flex items-center justify-center rounded-lg"
+          style={{ backgroundColor: icon.backdrop, padding: Math.round(icon.size * 0.15) + "px" }}
+        >
+          {iconElement}
+        </div>
+      ) : (
+        iconElement
+      )}
     </motion.div>
   );
 };
