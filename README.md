@@ -61,6 +61,8 @@ space-portfolio/
     |-- index.ts
   |- constants/
     |-- index.ts
+  |- hooks/
+    |-- useActiveSection.ts
   |- lib/
     |-- motion.ts
     |-- utils.ts
@@ -118,11 +120,14 @@ Useful resources and dependencies that are used in Space Portfolio.
 
 <!--- DEPENDENCIES_START --->
 - [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
+- [@lobehub/icons](https://www.npmjs.com/package/@lobehub/icons): ^5.10.0
+- [@lobehub/ui](https://www.npmjs.com/package/@lobehub/ui): ^5.17.0
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.6.1
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.17
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [antd-style](https://www.npmjs.com/package/antd-style): ^4.1.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.5.0
