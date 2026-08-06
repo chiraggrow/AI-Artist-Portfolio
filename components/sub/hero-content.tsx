@@ -1,6 +1,5 @@
 "use client";
 
-import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -20,12 +19,22 @@ export const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
+          className="flex w-fit items-center gap-3 overflow-hidden rounded-full border border-green-500/40 bg-green-500/10 px-4 py-2"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            Chirag Mittal's Portfolio
-          </h1>
+          <span className="relative flex h-2.5 w-2.5">
+            <span
+              className="animate-strong-pulse absolute inline-flex h-full w-full rounded-full bg-green-400"
+              style={{ animationDelay: "0s" }}
+            />
+            <span
+              className="animate-strong-pulse absolute inline-flex h-full w-full rounded-full bg-green-400"
+              style={{ animationDelay: "1.2s" }}
+            />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_4px_1px_rgba(34,197,94,0.4)]" />
+          </span>
+          <span className="text-xs font-medium uppercase tracking-widest text-green-400">
+            Open to work
+          </span>
         </motion.div>
 
         <motion.div
@@ -66,7 +75,7 @@ export const HeroContent = () => {
           height={650}
           width={650}
           draggable={false}
-          className="select-none"
+          className="select-none max-w-full h-auto"
         />
       </motion.div>
     </motion.div>

@@ -10,13 +10,13 @@ export const Projects = () => {
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className="grid h-full w-full grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((project) => (
           <ProjectCard
-            key={project.title}
+            key={project.title + project.videoId}
             videoId={project.videoId}
             title={project.title}
-            description={project.description}
+            category={project.category}
           />
         ))}
       </div>

@@ -23,7 +23,6 @@ import Kling from "@lobehub/icons/es/Kling";
 import Cursor from "@lobehub/icons/es/Cursor";
 import Windsurf from "@lobehub/icons/es/Windsurf";
 import Copilot from "@lobehub/icons/es/Copilot";
-import Codex from "@lobehub/icons/es/Codex";
 import Lovable from "@lobehub/icons/es/Lovable";
 import Replit from "@lobehub/icons/es/Replit";
 import V0 from "@lobehub/icons/es/V0";
@@ -64,7 +63,7 @@ export const ROW_2 = [
   { kind: "component" as const, name: "Cursor", component: Cursor.Combine, size: 56, isCombine: true, color: "#6C47FF" },
   { kind: "component" as const, name: "Windsurf", component: Windsurf.Combine, size: 56, isCombine: true, color: "#4A90D9" },
   { kind: "component" as const, name: "Copilot", component: Copilot.Color, size: 56 },
-  { kind: "component" as const, name: "Codex", component: Codex.Color, size: 56 },
+  { kind: "component" as const, name: "Codex", component: OpenAI.Combine, size: 56, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
   { kind: "component" as const, name: "Lovable", component: Lovable.Color, size: 56 },
   { kind: "component" as const, name: "Replit", component: Replit.Color, size: 56 },
   { kind: "component" as const, name: "v0", component: V0, size: 56, backdrop: "rgba(255,255,255,0.12)" },
@@ -124,27 +123,34 @@ export const SOCIALS = [
 export type Project = {
   videoId: string;
   title: string;
-  description: string;
+  description?: string;
+  category: string;
 };
 
 export const PROJECTS = [
   {
-    videoId: "Gvi7LIopTQE",
-    title: "AI Educational Short Film",
-    description:
-      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
-  },
-  {
     videoId: "W7iuhGPaay8",
     title: "AI UGC Skincare Commercial",
-    description:
-      "A high-converting AI-generated skincare advertisement featuring realistic virtual talent, product storytelling, and premium visuals.\nCreated using an end-to-end AI production pipeline from concept development to final cinematic edit.",
+    category: "AI Commercial",
   },
   {
-    videoId: "Yp3TagRSIXc",
+    videoId: "1Lkm1EJiuUQ",
     title: "AI Educational Short Film",
+    category: "AI Short Film",
     description:
       "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
+  },
+  {
+    videoId: "Gvi7LIopTQE",
+    title: "AI Educational Short Film",
+    category: "AI Short Film",
+    description:
+      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
+  },
+  {
+    videoId: "Rim34J1QjrI",
+    title: "Frooti Spec add (free tools used )",
+    category: "AI Short Film",
   },
 ] as const satisfies readonly Project[];
 
@@ -217,12 +223,8 @@ export const NAV_LINKS = [
     link: "#about-me",
   },
   {
-    title: "Skills",
-    link: "#skills",
-  },
-  {
-    title: "Tools",
-    link: "#tools",
+    title: "Services",
+    link: "#services",
   },
   {
     title: "Experience",
@@ -231,6 +233,10 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     link: "#projects",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
   },
 ] as const;
 
