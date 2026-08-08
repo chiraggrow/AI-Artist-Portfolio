@@ -227,12 +227,12 @@ export const NAV_LINKS = [
     link: "#services",
   },
   {
-    title: "Experience",
-    link: "#experience",
+    title: "Work",
+    link: "#projects",
   },
   {
-    title: "Projects",
-    link: "#projects",
+    title: "Experience",
+    link: "#experience",
   },
   {
     title: "Contact",
@@ -253,9 +253,9 @@ export type Experience = {
 
 export const EXPERIENCE = [
   {
-    company: "Enrai (Enrai Studio Private Limited)",
+    company: "Enrai Studio",
     role: "Generative AI Animation Intern",
-    duration: "May 2026 – Aug 2026",
+    duration: "May 2026 – July 2026",
     location: "Bengaluru, India",
     description:
       "Working as a Generative AI Animation Intern at Enrai Studio, contributing to Generative AI animation production pipelines for original content including anime series, AI-produced ad campaigns, and cinematic spec ads. Gaining hands-on experience across the full production pipeline — from concept and storyboarding to final delivery — under direct mentorship of the founding team.",

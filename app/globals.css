@@ -104,3 +104,27 @@ html {
   animation: strong-pulse 2.4s ease-out infinite;
 }
 
+.number-badge {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.15) 0%,
+    rgba(99, 102, 241, 0.08) 100%
+  );
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.05),
+    0 4px 12px rgba(139, 92, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  color: #c4b5fd;
+  letter-spacing: 0.02em;
+}
+

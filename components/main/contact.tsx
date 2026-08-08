@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
 import { SOCIALS } from "@/constants";
+import { SectionContainer } from "@/components/layout/section-container";
 
 const LINKEDIN_URL =
   SOCIALS.find((social) => social.name === "LinkedIn")?.link ?? "#";
@@ -12,9 +13,10 @@ export const Contact = () => {
       id="contact"
       className="relative flex flex-col items-center justify-center gap-3 py-20 text-white"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        Get In Touch
-      </h1>
+      <SectionContainer className="flex flex-col items-center justify-center gap-3">
+        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+          Get In Touch
+        </h1>
 
       <div className="relative w-full max-w-6xl overflow-hidden rounded-[32px] border border-[#7042f878] bg-transparent px-6 py-12 text-center shadow-[0_0_34px_rgba(112,66,248,0.18)] md:px-14 md:py-16">
         <div className="pointer-events-none absolute left-10 top-10 hidden h-[2px] w-12 bg-gradient-to-r from-[#7042f8] to-[#9cb2ff] md:block" />
@@ -57,6 +59,7 @@ export const Contact = () => {
           </Link>
         </div>
       </div>
+      </SectionContainer>
     </section>
   );
 };

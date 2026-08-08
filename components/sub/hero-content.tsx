@@ -8,14 +8,16 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/lib/motion";
+import { SectionContainer } from "@/components/layout/section-container";
 
 export const HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="relative z-[20] mt-40 w-full"
     >
+      <SectionContainer className="flex flex-row items-center justify-center">
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
@@ -78,6 +80,7 @@ export const HeroContent = () => {
           className="select-none max-w-full h-auto"
         />
       </motion.div>
+      </SectionContainer>
     </motion.div>
   );
 };

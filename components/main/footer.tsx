@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { SectionContainer } from "@/components/layout/section-container";
+
 const EMAIL = "chiragmittal905@gmail.com";
 
 export const Footer = () => {
@@ -7,7 +9,7 @@ export const Footer = () => {
     <footer
       className="relative w-full px-4 pb-8 pt-14 text-gray-200 md:pt-16"
     >
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center">
+      <SectionContainer className="flex flex-col items-center">
         <div className="mt-8 flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 pt-7 text-[13px] text-gray-400 md:flex-row">
           <p>&copy; {new Date().getFullYear()} Chirag Mittal</p>
 
@@ -24,7 +26,7 @@ export const Footer = () => {
             {EMAIL}
           </Link>
         </div>
-      </div>
+      </SectionContainer>
     </footer>
   );
 };

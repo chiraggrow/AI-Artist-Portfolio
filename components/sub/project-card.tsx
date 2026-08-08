@@ -90,7 +90,7 @@ export const ProjectCard = ({
           type="button"
           onClick={() => setIsModalOpen(true)}
           aria-label={`Play ${title}`}
-          className="relative aspect-[4/5] w-full cursor-pointer overflow-hidden bg-black text-left focus:outline-none"
+          className="relative aspect-[4/3] w-full cursor-pointer overflow-hidden bg-black text-left focus:outline-none"
         >
           {thumbFailed ? (
             <div
@@ -116,14 +116,14 @@ export const ProjectCard = ({
           <div className="absolute inset-0 bg-black/0 transition-colors duration-200 group-hover:bg-black/30" />
 
           {/* Category badge — top-left */}
-          <span className="absolute top-3 left-3 z-10 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+          <span className="absolute top-2.5 left-2.5 z-10 rounded-full border border-white/10 bg-black/60 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
             {category}
           </span>
 
           {/* Centered play button */}
           <span className="absolute inset-0 z-10 flex items-center justify-center">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-black transition-all duration-200 group-hover:scale-110 group-hover:bg-[#8b5cf6] group-hover:text-white">
-              <PlayIcon className="h-6 w-6" />
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black transition-all duration-200 group-hover:scale-110 group-hover:bg-[#8b5cf6] group-hover:text-white">
+              <PlayIcon className="h-5 w-5" />
             </span>
           </span>
         </button>

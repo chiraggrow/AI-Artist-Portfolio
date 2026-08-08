@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { ServiceCard } from "@/components/sub/service-card";
 import { SkillDataProvider } from "@/components/sub/skill-data-provider";
+import { SectionContainer } from "@/components/layout/section-container";
 
 import {
   ROW_1,
@@ -70,7 +71,7 @@ export const Services = () => {
       id="services"
       className="flex flex-col items-center justify-center py-20 text-white"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-6">
+      <SectionContainer className="flex flex-col items-center">
         <div className="mx-auto flex items-center gap-3">
           <span className="h-px w-8 bg-[#8b5cf6]" />
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b5cf6]">
@@ -136,7 +137,7 @@ export const Services = () => {
             ))}
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 };
