@@ -55,6 +55,7 @@ space-portfolio/
     |-- layout.tsx
     |-- page.tsx
   |- components/
+    |-- layout/
     |-- main/
     |-- sub/
   |- config/
