@@ -120,39 +120,83 @@ export const SOCIALS = [
   },
 ] as const;
 
-export type Project = {
+export type WorkItem = {
   videoId: string;
   title: string;
-  description?: string;
   category: string;
+  tag: string;
 };
 
-export const PROJECTS = [
+export const WORK_ITEMS = [
   {
     videoId: "W7iuhGPaay8",
     title: "AI UGC Skincare Commercial",
     category: "AI Commercial",
+    tag: "UGC",
   },
   {
     videoId: "1Lkm1EJiuUQ",
     title: "AI Educational Short Film",
     category: "AI Short Film",
-    description:
-      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
+    tag: "AI Short Film",
   },
   {
     videoId: "Gvi7LIopTQE",
     title: "AI Educational Short Film",
     category: "AI Short Film",
-    description:
-      "An AI-generated cinematic short combining storytelling, motion design, and realistic visuals to simplify complex ideas.\nBuilt using advanced prompting, image generation, video synthesis, and professional post-production workflows.",
+    tag: "AI Short Film",
   },
   {
     videoId: "Rim34J1QjrI",
     title: "Frooti Spec add (free tools used )",
-    category: "AI Short Film",
+    category: "AI Commercial",
+    tag: "Spec Ad",
   },
-] as const satisfies readonly Project[];
+  {
+    videoId: "Ve31hRSiju4",
+    title: "AI Short Film 2",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+  {
+    videoId: "emXzsCZSmFo",
+    title: "AI Short Film 2",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+] satisfies readonly WorkItem[];
+
+export type WorkSection = {
+  id: string;
+  title: string;
+  subtitle: string;
+  noun: string;
+  tags: readonly string[];
+};
+
+export const WORK_SECTIONS = [
+  {
+    id: "brand-films",
+    title: "Brand Films & Spec Ads",
+    subtitle: "Cinematic brand pieces",
+    noun: "film",
+    tags: ["Spec Ad", "Brand Film"],
+  },
+  {
+    id: "ai-short-films",
+    title: "AI Short Films",
+    subtitle: "Cinematic narrative pieces",
+    noun: "film",
+    tags: ["AI Short Film"],
+  },
+  {
+    id: "ugc-commercials",
+    title: "UGC & AI Commercials",
+    subtitle: "AI Avatar-led & UGC content",
+    noun: "campaign",
+    tags: ["AI Commercial", "UGC"],
+  },
+] satisfies readonly WorkSection[];
 
 export const FOOTER_DATA = [
   {
