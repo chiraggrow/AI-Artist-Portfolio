@@ -176,6 +176,12 @@ export const WORK_ITEMS = [
     category: "AI Visual Story",
     tag: "AI Visual Story",
   },
+  {
+    videoId: "a-YI7kn8Ths",
+    title: "UGC for RETENCY MEDIA",
+    category: "UGC",
+    tag: "UGC",
+  },
 ] satisfies readonly WorkItem[];
 
 export type WorkSection = {
@@ -187,13 +193,6 @@ export type WorkSection = {
 };
 
 export const WORK_SECTIONS = [
-  {
-    id: "brand-films",
-    title: "Brand Films & Spec Ads",
-    subtitle: "Cinematic brand pieces",
-    noun: "film",
-    tags: ["Spec Ad", "Brand Film"],
-  },
   {
     id: "ai-short-films",
     title: "AI Short Films",
@@ -209,11 +208,11 @@ export const WORK_SECTIONS = [
     tags: ["AI Visual Story"],
   },
   {
-    id: "ugc-commercials",
-    title: "UGC & AI Commercials",
-    subtitle: "AI Avatar-led & UGC content",
+    id: "brand-ugc",
+    title: "Brand Films - Spec Ads / UGC",
+    subtitle: "Cinematic brand, spec & UGC content",
     noun: "campaign",
-    tags: ["AI Commercial", "UGC"],
+    tags: ["Spec Ad", "Brand Film", "AI Commercial", "UGC"],
   },
 ] satisfies readonly WorkSection[];
 
