@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export type SkillIcon =
-  | { kind: "component"; name: string; size: number; component: React.ElementType; isCombine?: boolean; color?: string; backdrop?: string }
-  | { kind: "image"; name: string; size: number; src: string };
+  | { kind: "component"; name: string; size: number; component: React.ElementType; isCombine?: boolean; color?: string; backdrop?: string; tint?: string }
+  | { kind: "image"; name: string; size: number; src: string; tint?: string };
 
 type SkillDataProviderProps = {
   icon: SkillIcon;

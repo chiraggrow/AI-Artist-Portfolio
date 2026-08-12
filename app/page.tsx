@@ -4,6 +4,7 @@ import { Experience } from "@/components/main/experience";
 import { Hero } from "@/components/main/hero";
 import { Projects } from "@/components/main/projects";
 import { Services } from "@/components/main/services";
+import { ToolsMarquee } from "@/components/main/tools-marquee";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="flex flex-col gap-20">
         <Hero />
         <Services />
+        <ToolsMarquee />
         <Projects />
         <Experience />
         <Encryption />

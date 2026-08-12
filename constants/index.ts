@@ -34,7 +34,6 @@ import Notion from "@lobehub/icons/es/Notion";
 import CapCut from "@lobehub/icons/es/CapCut";
 import Vercel from "@lobehub/icons/es/Vercel";
 import Suno from "@lobehub/icons/es/Suno";
-import OpenCode from "@lobehub/icons/es/OpenCode";
 import Antigravity from "@lobehub/icons/es/Antigravity";
 import Meta from "@lobehub/icons/es/Meta";
 import Anthropic from "@lobehub/icons/es/Anthropic";
@@ -43,45 +42,74 @@ import Obsidian from "@lobehub/icons/es/Obsidian";
 
 // Row 1 – 13 icons: Major AI Models & Platforms (≈64px)
 export const ROW_1 = [
-  { kind: "component" as const, name: "OpenAI", component: OpenAI.Combine, size: 64, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
-  { kind: "component" as const, name: "Claude", component: Claude.Color, size: 64 },
-  { kind: "component" as const, name: "Gemini", component: Gemini.Color, size: 64 },
-  { kind: "component" as const, name: "Grok", component: Grok.Combine, size: 64, isCombine: true },
-  { kind: "component" as const, name: "Perplexity", component: Perplexity.Color, size: 64 },
-  { kind: "component" as const, name: "DeepSeek", component: DeepSeek.Color, size: 64 },
-  { kind: "component" as const, name: "Mistral", component: Mistral.Color, size: 64 },
-  { kind: "component" as const, name: "Midjourney", component: Midjourney.Combine, size: 64, isCombine: true },
-  { kind: "component" as const, name: "Sora", component: Sora.Color, size: 64 },
-  { kind: "component" as const, name: "Runway", component: Runway.Combine, size: 64, isCombine: true },
-  { kind: "component" as const, name: "Pika", component: Pika.Combine, size: 64, isCombine: true, color: "#FFD184" },
-  { kind: "component" as const, name: "Hailuo", component: Hailuo.Color, size: 64 },
-  { kind: "component" as const, name: "Kling", component: Kling.Color, size: 64 },
+  { kind: "component" as const, name: "OpenAI", component: OpenAI, size: 64, color: "#10A37F", tint: "#10A37F" },
+  { kind: "component" as const, name: "Claude", component: Claude.Color, size: 64, tint: "#D97757" },
+  { kind: "component" as const, name: "Gemini", component: Gemini.Color, size: 64, tint: "#3186FF" },
+  { kind: "component" as const, name: "Grok", component: Grok, size: 64, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Perplexity", component: Perplexity.Color, size: 64, tint: "#22B8CD" },
+  { kind: "component" as const, name: "DeepSeek", component: DeepSeek.Color, size: 64, tint: "#4D6BFE" },
+  { kind: "component" as const, name: "Mistral", component: Mistral.Color, size: 64, tint: "#FA500F" },
+  { kind: "component" as const, name: "Midjourney", component: Midjourney, size: 64, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Sora", component: Sora.Color, size: 64, tint: "#000000" },
+  { kind: "component" as const, name: "Runway", component: Runway, size: 64, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Pika", component: Pika, size: 64, color: "#FFFFFF", tint: "#FDF7EF" },
+  { kind: "component" as const, name: "Hailuo", component: Hailuo.Color, size: 64, tint: "#000000" },
+  { kind: "component" as const, name: "Kling", component: Kling.Color, size: 64, tint: "#000000" },
 ];
 
-// Row 2 – 10 icons: AI Development Tools (≈56px)
+// Row 2 – 9 icons: AI Development Tools (≈56px)
 export const ROW_2 = [
-  { kind: "component" as const, name: "Cursor", component: Cursor.Combine, size: 56, isCombine: true, color: "#6C47FF" },
-  { kind: "component" as const, name: "Windsurf", component: Windsurf.Combine, size: 56, isCombine: true, color: "#4A90D9" },
-  { kind: "component" as const, name: "Copilot", component: Copilot.Color, size: 56 },
-  { kind: "component" as const, name: "Codex", component: OpenAI.Combine, size: 56, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
-  { kind: "component" as const, name: "Lovable", component: Lovable.Color, size: 56 },
-  { kind: "component" as const, name: "Replit", component: Replit.Color, size: 56 },
-  { kind: "component" as const, name: "v0", component: V0, size: 56, backdrop: "rgba(255,255,255,0.12)" },
-  { kind: "component" as const, name: "NotebookLM", component: NotebookLM.Combine, size: 56, isCombine: true },
-  { kind: "component" as const, name: "HuggingFace", component: HuggingFace.Color, size: 56 },
-  { kind: "component" as const, name: "Replicate", component: Replicate.Brand, size: 56, color: "#EA2805" },
+  { kind: "component" as const, name: "Cursor", component: Cursor, size: 56, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Windsurf", component: Windsurf, size: 56, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Copilot", component: Copilot.Color, size: 56, tint: "#000000" },
+  { kind: "component" as const, name: "Lovable", component: Lovable.Color, size: 56, tint: "#000000" },
+  { kind: "component" as const, name: "Replit", component: Replit.Color, size: 56, tint: "#FD5402" },
+  { kind: "component" as const, name: "v0", component: V0, size: 56, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "NotebookLM", component: NotebookLM, size: 56, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "HuggingFace", component: HuggingFace.Color, size: 56, tint: "#FFD21E" },
+  { kind: "component" as const, name: "Replicate", component: Replicate, size: 56, color: "#EA2805", tint: "#EA2805" },
 ];
 
 // Row 3 – 8 icons: AI Apps & Creative Tools (≈48px)
 export const ROW_3 = [
-  { kind: "component" as const, name: "Figma", component: Figma.Color, size: 48 },
-  { kind: "component" as const, name: "Notion", component: Notion.Combine, size: 48, isCombine: true, backdrop: "#FFFFFF", color: "#000000" },
-  { kind: "image" as const, name: "Canva", src: "/assets/icons/canva.svg", size: 48 },
-  { kind: "component" as const, name: "CapCut", component: CapCut.Combine, size: 48, isCombine: true },
-  { kind: "component" as const, name: "Vercel", component: Vercel.Combine, size: 48, isCombine: true, backdrop: "rgba(255,255,255,0.12)" },
-  { kind: "component" as const, name: "Suno", component: Suno.Combine, size: 48, isCombine: true },
-  { kind: "component" as const, name: "OpenCode", component: OpenCode.Combine, size: 48, isCombine: true, color: "#007AFF" },
-  { kind: "component" as const, name: "Antigravity", component: Antigravity.Color, size: 48 },
+  { kind: "component" as const, name: "Figma", component: Figma.Color, size: 48, tint: "#000000" },
+  { kind: "component" as const, name: "Notion", component: Notion, size: 48, backdrop: "#FFFFFF", color: "#000000", tint: "#000000" },
+  { kind: "image" as const, name: "Canva", src: "/assets/icons/canva.svg", size: 48, tint: "#24BECA" },
+  { kind: "component" as const, name: "CapCut", component: CapCut, size: 48, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Vercel", component: Vercel, size: 48, color: "#FFFFFF", tint: "#000000" },
+  { kind: "component" as const, name: "Suno", component: Suno, size: 48, color: "#FFFFFF", tint: "#000000" },
+  { kind: "image" as const, name: "OpenCode", src: "/assets/icons/opencode.svg", size: 48, tint: "#000000" },
+  { kind: "component" as const, name: "Antigravity", component: Antigravity.Color, size: 48, tint: "#000000" },
+];
+
+// Deterministic seeded shuffle so all 30 marquee icons are randomly placed
+// across 3 rows (each tool appears exactly once) without a hydration mismatch.
+const mulberry32 = (seed: number) => {
+  let a = seed;
+  return () => {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+};
+
+const shuffledMarqueeIcons = (() => {
+  const rnd = mulberry32(20260812);
+  const list = [...ROW_1, ...ROW_2, ...ROW_3];
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+})();
+
+// Three rows of 10 unique icons, randomized (no grouping by type)
+export const MARQUEE_ROWS = [
+  shuffledMarqueeIcons.slice(0, 10),
+  shuffledMarqueeIcons.slice(10, 20),
+  shuffledMarqueeIcons.slice(20, 30),
 ];
 
 // Row 4 – 4 icons: AI Infrastructure & Agents (≈40px)

@@ -9,16 +9,7 @@ import {
   MegaphoneIcon,
 } from "@heroicons/react/24/outline";
 import { ServiceCard } from "@/components/sub/service-card";
-import { SkillDataProvider } from "@/components/sub/skill-data-provider";
 import { SectionContainer } from "@/components/layout/section-container";
-
-import {
-  ROW_1,
-  ROW_2,
-  ROW_3,
-  ROW_4,
-  ROW_5,
-} from "@/constants";
 
 const SERVICES_DATA = [
   {
@@ -100,42 +91,6 @@ export const Services = () => {
               index={i}
             />
           ))}
-        </div>
-
-        <div
-          style={{ transform: "scale(0.9)" }}
-          className="mt-10 flex w-full flex-col items-center justify-center gap-3 py-20"
-        >
-          <h2 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-            My Tools.
-          </h2>
-
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-24 items-center">
-            {ROW_1.map((icon, i) => (
-              <SkillDataProvider key={icon.name} icon={icon as any} index={i} />
-            ))}
-          </div>
-
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-24 items-center">
-            {ROW_2.map((icon, i) => (
-              <SkillDataProvider key={icon.name} icon={icon as any} index={i} />
-            ))}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-24 items-center">
-            {ROW_3.map((icon, i) => (
-              <SkillDataProvider key={icon.name} icon={icon as any} index={i} />
-            ))}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-24 items-center">
-            {ROW_4.map((icon, i) => (
-              <SkillDataProvider key={icon.name} icon={icon as any} index={i} />
-            ))}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-24 items-center">
-            {ROW_5.map((icon, i) => (
-              <SkillDataProvider key={icon.name} icon={icon as any} index={i} />
-            ))}
-          </div>
         </div>
       </SectionContainer>
     </section>
