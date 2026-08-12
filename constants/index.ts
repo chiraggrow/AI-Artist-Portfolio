@@ -164,6 +164,18 @@ export const WORK_ITEMS = [
     category: "AI Short Film",
     tag: "AI Short Film",
   },
+  {
+    videoId: "heb5EEkZRBU",
+    title: "AI Visual Story 2",
+    category: "AI Visual Story",
+    tag: "AI Visual Story",
+  },
+  {
+    videoId: "J7iQx6SheMo",
+    title: "AI Visual Story",
+    category: "AI Visual Story",
+    tag: "AI Visual Story",
+  },
 ] satisfies readonly WorkItem[];
 
 export type WorkSection = {
@@ -188,6 +200,13 @@ export const WORK_SECTIONS = [
     subtitle: "Cinematic narrative pieces",
     noun: "film",
     tags: ["AI Short Film"],
+  },
+  {
+    id: "ai-visual-stories",
+    title: "AI Visual Stories",
+    subtitle: "Cinematic AI experiments",
+    noun: "film",
+    tags: ["AI Visual Story"],
   },
   {
     id: "ugc-commercials",

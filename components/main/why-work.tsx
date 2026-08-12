@@ -5,39 +5,39 @@ import { SectionContainer } from "@/components/layout/section-container";
 const FEATURES = [
   {
     number: "01",
-    title: "Purposeful Direction",
+    title: "Cinematic-First Thinking",
     description:
-      "Every frame serves a goal. I align AI visuals and campaigns with your brand's message and business outcome — not just aesthetics.",
+      "I don't just generate visuals — I direct them. Every shot is composed with intention, built around story and emotion, not just prompts.",
   },
   {
     number: "02",
-    title: "In-The-Trenches Craft",
+    title: "Hands-On With Every Tool",
     description:
-      "I work inside the tools daily — prompting, generating, compositing, editing — so nothing gets lost between concept and final render.",
+      "I work daily inside the generative pipeline — prompting, generating, compositing, editing — so nothing gets lost between concept and final render.",
   },
   {
     number: "03",
-    title: "Insight-Led Creativity",
+    title: "Brand-Aligned Creative",
     description:
-      "Performance, feedback, and iteration shape every creative decision — blending taste with what actually connects.",
+      "AI visuals mean nothing if they don't serve the brand. I build campaigns that match your voice, audience, and business goal — not just aesthetics.",
   },
   {
     number: "04",
-    title: "AI-Powered Speed",
+    title: "Speed Without Compromise",
     description:
-      "Gen-AI pipelines let me produce cinematic-quality output in days, not months — fast turnaround without cutting corners.",
+      "Generative AI lets me deliver cinematic-quality ads in days, not weeks — without cutting corners on craft or consistency.",
   },
   {
     number: "05",
-    title: "Ownership Mindset",
+    title: "Full Ownership of the Process",
     description:
-      "I treat every project like my own — from the first prompt to the final export, delivering polished, ready-to-publish work.",
+      "From first concept to final cut, I run the entire pipeline myself — no handoffs, no dilution of vision.",
   },
   {
     number: "06",
-    title: "Results-Driven",
+    title: "Built for Real Impact",
     description:
-      "Portfolio is nice, but impact matters. I build content engineered for views, engagement, and conversion.",
+      "A good reel is nice. A campaign that performs is better. I focus on output that actually moves the needle for the brand.",
   },
 ];
 

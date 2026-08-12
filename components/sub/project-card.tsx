@@ -12,7 +12,13 @@ type ProjectCardProps = {
   category: string;
 };
 
-const THUMB_QUALITIES = ["maxresdefault", "hqdefault", "mqdefault", "default"];
+const THUMB_CANDIDATES = [
+  { host: "https://img.youtube.com/vi", quality: "maxresdefault" },
+  { host: "https://i.ytimg.com/vi", quality: "hq2" },
+  { host: "https://img.youtube.com/vi", quality: "hqdefault" },
+  { host: "https://img.youtube.com/vi", quality: "mqdefault" },
+  { host: "https://img.youtube.com/vi", quality: "default" },
+];
 
 const PlayIcon = ({ className = "h-6 w-6" }: { className?: string }) => (
   <svg
@@ -41,13 +47,13 @@ export const ProjectCard = ({
   title,
   category,
 }: ProjectCardProps) => {
-  const [thumbQuality, setThumbQuality] = useState(0);
+  const [thumbIndex, setThumbIndex] = useState(0);
   const [thumbFailed, setThumbFailed] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
 
   const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-  const thumbUrl = `https://img.youtube.com/vi/${videoId}/${THUMB_QUALITIES[thumbQuality]}.jpg`;
+  const thumbUrl = `${THUMB_CANDIDATES[thumbIndex].host}/${videoId}/${THUMB_CANDIDATES[thumbIndex].quality}.jpg`;
 
   useEffect(() => {
     setPortalRoot(document.body);
@@ -75,8 +81,8 @@ export const ProjectCard = ({
   }, []);
 
   const handleThumbError = () => {
-    if (thumbQuality < THUMB_QUALITIES.length - 1) {
-      setThumbQuality((q) => q + 1);
+    if (thumbIndex < THUMB_CANDIDATES.length - 1) {
+      setThumbIndex((i) => i + 1);
     } else {
       setThumbFailed(true);
     }
