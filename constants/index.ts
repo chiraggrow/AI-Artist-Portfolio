@@ -136,13 +136,37 @@ export const WORK_ITEMS = [
   },
   {
     videoId: "1Lkm1EJiuUQ",
-    title: "AI Educational Short Film",
+    title: "AI Short Film - 1",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+  {
+    videoId: "emXzsCZSmFo",
+    title: "AI Short Film - 2",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+  {
+    videoId: "BnqDBu8H_pQ",
+    title: "AI Short Film - 3",
     category: "AI Short Film",
     tag: "AI Short Film",
   },
   {
     videoId: "Gvi7LIopTQE",
-    title: "AI Educational Short Film",
+    title: "AI Short Film - 4",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+  {
+    videoId: "Ve31hRSiju4",
+    title: "AI Short Film - 5",
+    category: "AI Short Film",
+    tag: "AI Short Film",
+  },
+  {
+    videoId: "T6DaO6i1WQU",
+    title: "AI Short Film - 6",
     category: "AI Short Film",
     tag: "AI Short Film",
   },
@@ -151,18 +175,6 @@ export const WORK_ITEMS = [
     title: "Frooti Spec add (free tools used )",
     category: "AI Commercial",
     tag: "Spec Ad",
-  },
-  {
-    videoId: "Ve31hRSiju4",
-    title: "AI Short Film 2",
-    category: "AI Short Film",
-    tag: "AI Short Film",
-  },
-  {
-    videoId: "emXzsCZSmFo",
-    title: "AI Short Film 2",
-    category: "AI Short Film",
-    tag: "AI Short Film",
   },
   {
     videoId: "heb5EEkZRBU",
